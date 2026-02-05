@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET PG Prep Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NEET PG Prep Hub</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#pyqs">PYQs</a>
+            <a href="#mcqs">MCQs Practice</a>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <section id="home">
+            <h2>Welcome, NEET PG Aspirants!</h2>
+            <p>Access previous year questions (PYQs) and practice MCQs with a 1-minute timer per question. Sharpen your skills and ace the exam!</p>
+            <p><strong>Note:</strong> MCQs are timed at 1 minute each. Practice regularly!</p>
+        </section>
+        
+        <section id="pyqs" class="hidden">
+            <h2>Previous Year Questions (PYQs)</h2>
+            <div id="pyq-filters">
+                <label for="year-select">Year:</label>
+                <select id="year-select">
+                    <option value="all">All</option>
+                    <!-- Add options dynamically via JS -->
+                </select>
+                <label for="subject-select">Subject:</label>
+                <select id="subject-select">
+                    <option value="all">All</option>
+                    <!-- Add options dynamically via JS -->
+                </select>
+            </div>
+            <div id="pyq-list"></div>
+        </section>
+        
+        <section id="mcqs" class="hidden">
+            <h2>MCQs Practice</h2>
+            <button id="start-quiz">Start Timed Quiz (1 min per MCQ)</button>
+            <div id="quiz-container" class="hidden">
+                <div id="timer">Time Left: 60s</div>
+                <div id="question"></div>
+                <div id="options"></div>
+                <button id="submit-answer">Submit Answer</button>
+            </div>
+            <div id="results" class="hidden">
+                <h3>Quiz Results</h3>
+                <p id="score"></p>
+                <p id="time-taken"></p>
+                <button id="retry">Retry Quiz</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 NEET PG Prep Hub. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
